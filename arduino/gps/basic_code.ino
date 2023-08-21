@@ -57,9 +57,9 @@ void displayInfo()
   Serial.print("Date: ");
   if (gps.date.isValid())
   {
-    Serial.print(gps.date.month());
-    Serial.print("/");
     Serial.print(gps.date.day());
+    Serial.print("/");
+    Serial.print(gps.date.month());
     Serial.print("/");
     Serial.println(gps.date.year());
   }
