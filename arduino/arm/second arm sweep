@@ -1,0 +1,143 @@
+#include <Servo.h>
+Servo servo3;
+Servo servo4;
+int d = 40;
+int ffactor = 191;
+void setup() {
+  // put your setup code here, to run once:
+servo3.attach(9);
+servo4.attach(10);
+}
+
+void loop() {
+  for ( int i = 37; i <160; i++)
+  {
+    if (i == 37)
+    {
+      ffactor = 191;
+    }
+    
+    if (i > 37 && i < 44)
+    {
+      ffactor = 190;
+    }
+    if (i > 43 && i < 46)
+    {
+      ffactor = 189;
+    }
+
+    if (i > 45 && i < 51)
+    {
+      ffactor = 190;
+    }
+
+    if (i > 50 && i < 56)
+    {
+      ffactor = 189;
+    }
+    if (i > 55 && i < 61)
+    {
+      ffactor = 188;
+    }
+    if (i > 60 && i < 64)
+    {
+      ffactor = 187;
+    }
+    if (i > 63 && i < 80)
+    {
+      ffactor = 186;
+    }
+    if (i > 79 && i < 86)
+    {
+      ffactor = 185;
+    }
+    if (i > 85 && i < 97)
+    {
+      ffactor = 184;
+    }
+    if (i > 96 && i < 107)
+    {
+      ffactor = 183;
+    }
+    if (i > 106 && i < 145)
+    {
+      ffactor = 182;
+    }
+    if (i > 144 && i < 154)
+    {
+      ffactor = 181;
+    }
+    if (i > 153)
+    {
+      ffactor = 180;
+    }
+    servo3.write(i);
+    servo4.write(ffactor-i);
+    delay(d);
+  }
+  for ( int i = 160; i > 37; i --)
+  {
+    if (i == 37)
+    {
+      ffactor = 191;
+    }
+    
+    if (i > 37 && i < 44)
+    {
+      ffactor = 190;
+    }
+    if (i > 43 && i < 46)
+    {
+      ffactor = 189;
+    }
+
+    if (i > 45 && i < 51)
+    {
+      ffactor = 190;
+    }
+
+    if (i > 50 && i < 56)
+    {
+      ffactor = 189;
+    }
+    if (i > 55 && i < 61)
+    {
+      ffactor = 188;
+    }
+    if (i > 60 && i < 64)
+    {
+      ffactor = 187;
+    }
+    if (i > 63 && i < 80)
+    {
+      ffactor = 186;
+    }
+    if (i > 79 && i < 86)
+    {
+      ffactor = 185;
+    }
+    if (i > 85 && i < 97)
+    {
+      ffactor = 184;
+    }
+    if (i > 96 && i < 107)
+    {
+      ffactor = 183;
+    }
+    if (i > 106 && i < 145)
+    {
+      ffactor = 182;
+    }
+    if (i > 144 && i < 154)
+    {
+      ffactor = 181;
+    }
+    if (i > 153)
+    {
+      ffactor = 181;
+    }
+    servo3.write(i);
+    servo4.write(ffactor-i);
+    delay(d);
+  }
+}
