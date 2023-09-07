@@ -164,7 +164,7 @@ def arduino():
     if arm2ChangeTextBox.value == "":
         arm2send = "empty"
     elif arm2ChangeTextBox.value.isnumeric() == True:
-        if int(arm2ChangeTextBox.value) >= 0 and int(arm2ChangeTextBox.value) <= 180:
+        if int(arm2ChangeTextBox.value) >= 37 and int(arm2ChangeTextBox.value) <= 148:
             arm2send = "valid"
         else:
             arm2send = "invalid"
